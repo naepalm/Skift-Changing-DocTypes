@@ -1,0 +1,40 @@
+{
+	propertyEditors: [{
+		name: "Text Over Image Editor",
+		alias: "TextOverImage.Editor",
+		icon: "icon-billboard",
+		group: "media",
+		editor: {
+			view: "~/app_plugins/TextOverImageEditor/views/TextOverImageEditorView.html",
+			valueType: "JSON"
+		},
+		prevalues: {
+			fields: [
+				{
+					label: "Max Width",
+					description: "The maximum width the selected image displays at.",
+					key: "maxWidth",
+					view: "number"
+				},
+				{
+					label: "Show Sub-Headline",
+					description: "Show a second headline that can be edited below the first.",
+					key: "showSubHeadline",
+					view: "boolean"
+				},
+				{
+					label: "Show Link",
+					description: "Allow the user to add a link below the text",
+					key: "showLink",
+					view: "boolean"
+				}
+			]
+		}
+	}],
+	javascript: [
+		"~/app_plugins/TextOverImageEditor/js/textOverImage.js"
+	],
+	css : [
+		"~/app_plugins/TextOverImageEditor/css/textOverImage.css"
+	]
+}
